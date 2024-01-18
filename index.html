@@ -1,0 +1,93 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Css Form</title>
+  </head>
+  <style>
+    body {
+      background-color: rgba(90, 88, 88, 0.986);
+    }
+    * {
+      padding: 0;
+      margin: 0;
+    }
+    .container {
+      margin-top: 100px;
+    }
+    input,
+    textarea {
+      width: 30%;
+      margin: 30px;
+      padding: 20px;
+      border: 0;
+      border-bottom: 1px white solid;
+      background-color: rgba(90, 88, 88, 0.986);
+      outline: none; 
+      color: white;
+      font-size: 15px;
+    }
+
+    input::placeholder {
+      color: white;
+      font-size: 15px;
+      transition: color 0.3s ease; 
+    }
+
+    input:focus,
+    textarea:focus {
+      border-color: transparent; 
+      border-bottom-color: blue;
+      border-bottom: 2px blue solid;
+    }
+
+    input:focus::placeholder {
+      color: blue; 
+    }
+    textarea{
+        font-size: 15px;
+    }
+    textarea:focus{
+        color: blue;
+    }
+
+    button {
+      color: white;
+      background-color: blue;
+      padding: 20px;
+      border: none;
+      cursor: pointer;
+      margin-right: 20px;
+      border-radius: 12px;
+      font-size: 15px;
+    }
+
+    button.cancel {
+      background-color: white;
+      color: black;
+    }
+    button.cancel:hover{
+      background-color: blue;
+      color: white;
+    }
+    button.submit:hover{
+      background-color: white;
+      color: blue;
+    }
+  </style>
+
+  <body>
+    <center>
+      <div class="container">
+        <input placeholder="Name" type="text" /><br />
+        <input placeholder="Email" /><br />
+        <input placeholder="Password" type="password" /><br />
+        <input placeholder="Number" type="text" /><br />
+        <textarea name="" id="" cols="30" rows="10">Message</textarea><br />
+        <button class="submit">Submit</button>
+        <button class="cancel">Cancel</button>
+      </div>
+    </center>
+  </body>
+</html>
